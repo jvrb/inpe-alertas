@@ -27,4 +27,4 @@ jobs:
 
       # 3. Teste simples de funcionamento
       - name: Teste de funcionamento
-        run: echo "CI funcionando"
+        run: echo "Pipeline do projeto INPE executado com sucesso!"
