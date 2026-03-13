@@ -1,0 +1,24 @@
+{
+  "name": "inpe-alertas",
+  "version": "1.0.0",
+  "description": "Objetivo: app móvel para aletar de queimadas, inundações, desmatamento e relatos da população em tempo real.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvrb/inpe-alertas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvrb/inpe-alertas/issues"
+  },
+  "homepage": "https://github.com/jvrb/inpe-alertas#readme",
+  "devDependencies": {
+    "eslint": "^10.0.3",
+    "prettier": "^3.8.1"
+  }
+}
