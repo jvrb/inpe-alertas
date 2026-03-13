@@ -1,30 +1,29 @@
-# Nome do workflow (aparecerá na aba Actions)
-name: CI Simples
+name: CI com ESLint
 
-# Eventos que disparam o workflow:
-# - push (quando algo é commitado)
-# - pull_request (quando há PR)
 on:
   push:
-    branches: [ dev ] # dispara apenas quando o commit é na branch dev
+    branches: [ dev ]
   pull_request:
-    branches: [ dev ] # dispara quando há PR para dev
+    branches: [ dev ]
 
 jobs:
-  # Definindo um job chamado "build"
-  build:
-    runs-on: ubuntu-latest # ambiente que o GitHub usa (máquina Linux)
+  lint:
+    runs-on: ubuntu-latest
     steps:
-      # 1. Baixar o código do repositório
+      # 1. Baixar o código
       - name: Checkout do repositório
         uses: actions/checkout@v4
 
-      # 2. Configurar Node.js
+      # 2. Instalar Node.js
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '18'
 
-      # 3. Teste simples de funcionamento
-      - name: Teste de funcionamento
-        run: echo "Pipeline do projeto INPE executado com sucesso!"
+      # 3. Instalar dependências
+      - name: Instalar dependências
+        run: npm install
+
+      # 4. Rodar ESLint
+      - name: Rodar ESLint
+        run: npx eslint .
