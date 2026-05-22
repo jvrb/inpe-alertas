@@ -27,3 +27,7 @@ jobs:
       # 4. Rodar ESLint
       - name: Rodar ESLint
         run: npx eslint .
+
+      # 5. Rodar Jest
+      - name: Rodar Jest
+        run: npm test
