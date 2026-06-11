@@ -4,7 +4,8 @@
   "description": "Objetivo: app móvel para aletar de queimadas, inundações, desmatamento e relatos da população em tempo real.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
